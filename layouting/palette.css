@@ -28,8 +28,16 @@ article {
 }
 
 .container {
+    display: flex;
+    align-items: center;
     position:relative;
     margin-top: 10px;
+}
+
+.scores {
+    position: absolute;
+    right: 1px;
+    top: -5px;
 }
 
 .stars {
@@ -40,6 +48,7 @@ article {
 }
 
 .hearts {
+    display: inline-block;
     position: relative;
     left: 18px;
     height: 15px;

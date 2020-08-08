@@ -14,8 +14,10 @@ body {
 }
 
 section {
+    height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     padding: 60px;
 }
@@ -24,16 +26,35 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin: 15px;
 }
 
-article img {
+.photos {
     margin-bottom: 30px;
     width: 350px;
+
+    transition: all 0.3s ease;
 }
 
-h2 {
+.photos:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 17px -3px #b3a590a2;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+a {
     font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+
+    transition: all 0.1s ease;
+}
+
+a:hover {
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.658);
 }
 
 .container {
@@ -50,26 +71,24 @@ h2 {
     width: 22px;
     height: 22px;
     position: absolute;
-    bottom: -15px;
-    left: 6px;
+    bottom: 15px;
+    left: 7px;
 }
 
-.scores {
-    position: absolute;
+.scores-position {
     left: 40px;
 }
 
 /*checkbox-styling*/
 .hearts {
-    /* relative for the pseudo elements */
     position: relative;
     left: 26px;
     bottom: -2px;
     height: 13px;
     width: 13px;
-    transform: rotate(45deg);
     background-color: rgb(223, 223, 223);
     outline: none;
+    transform: rotate(45deg);
     -webkit-appearance:none;
 }
 
@@ -104,9 +123,13 @@ h2 {
 }
 /*/checkbox-styling*/
 
-.likes {
-    position: absolute;
+.likes-position {
     right: 10px;
+}
+
+.scores, .likes {
+    position: absolute;
+    font-size: 16px;
 }
 
 p {
@@ -116,7 +139,7 @@ p {
 }
 
 .buttons {
-    width: 200px;
+    width: 210px;
     display: flex;
     margin-top: 20px;
     justify-content: space-around;
@@ -125,8 +148,10 @@ p {
 input[type="button"] {
     font-weight: bold;
     font-family: Muli;
-    padding: 6px 23px 8px 23px;
+    padding: 6px 25px 8px 25px;
     border: 3px solid black;
+
+    transition: all 0.3s ease;
 }
 
 input[type="button"]:first-child {

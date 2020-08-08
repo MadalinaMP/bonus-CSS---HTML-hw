@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: Muli;
-    src: url('src/Muli.ttf');
+    src: url('font/Muli.ttf');
 }
 
 body {
@@ -18,7 +18,7 @@ section {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 60px;
 }
 
 article {
@@ -27,58 +27,69 @@ article {
     align-items: center;
 }
 
+article img {
+    margin-bottom: 30px;
+    width: 350px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
 .container {
+    position: relative;
     display: flex;
     align-items: center;
-    position:relative;
-    margin-top: 10px;
+    justify-content: center;
+    min-width: 150px;
+    min-height: 50px;
+}
+
+.stars {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    bottom: -15px;
+    left: 6px;
 }
 
 .scores {
     position: absolute;
-    right: 1px;
-    top: -5px;
+    left: 40px;
 }
 
-.stars {
-    position: absolute;
-    top: -5px;
-    right: 32px;
-    width: 25px;
-}
-
+/*checkbox-styling*/
 .hearts {
-    display: inline-block;
+    /* relative for the pseudo elements */
     position: relative;
-    left: 18px;
-    height: 15px;
-    width: 15px;
+    left: 26px;
+    bottom: -2px;
+    height: 13px;
+    width: 13px;
     transform: rotate(45deg);
     background-color: rgb(223, 223, 223);
     outline: none;
     -webkit-appearance:none;
 }
 
-.hearts::before{
+.hearts-position-color::before,
+.hearts-position-color::after {
     position:absolute;
     content:"";
     background-color:rgb(223, 223, 223);
     height: 60%;
     width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.hearts::before{
     top: -50%;
-    border-radius: 10px 10px 0 0 ;
 }
 
 .hearts::after{
-    position:absolute;
-    content:"";
-    background-color:rgb(223, 223, 223);
-    height: 60%;
-    width: 100%;
     top: 20%;
     right: 70%;
     transform: rotate(-90deg);
-    border-radius: 10px 10px 0 0;
 }
 
 .hearts:checked,
@@ -90,8 +101,15 @@ article {
 .hearts:hover{
     cursor: pointer;
 }
+/*/checkbox-styling*/
 
-img {
-    margin-bottom: 20px;
-    width: 350px;
+.likes {
+    position: absolute;
+    right: 10px;
+}
+
+p {
+    color: rgb(131, 131, 131);
+    text-align: center;
+    font-size: 14px;
 }

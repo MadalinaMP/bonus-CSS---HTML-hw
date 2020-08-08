@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px dotted gray; */
 }
 
 @font-face {
@@ -25,6 +24,7 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 article img {
@@ -43,6 +43,7 @@ h2 {
     justify-content: center;
     min-width: 150px;
     min-height: 50px;
+    margin-bottom: 5px;
 }
 
 .stars {
@@ -112,4 +113,39 @@ p {
     color: rgb(131, 131, 131);
     text-align: center;
     font-size: 14px;
+}
+
+.buttons {
+    width: 200px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+input[type="button"] {
+    font-weight: bold;
+    font-family: Muli;
+    padding: 6px 23px 8px 23px;
+    border: 3px solid black;
+}
+
+input[type="button"]:first-child {
+    background-color: black;
+    color: white;
+}
+
+input[type="button"]:first-child:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+input[type="button"]:nth-child(2) {
+    background-color: white;
+}
+
+input[type="button"]:nth-child(2):hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }

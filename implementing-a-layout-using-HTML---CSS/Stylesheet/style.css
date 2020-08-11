@@ -143,6 +143,7 @@ figure div:last-child {
 figure div:last-child:hover {
     -webkit-transform: scale(1.05);
     transform: scale(1.03);
+    background-color: rgb(116, 167, 219);
     cursor: pointer;
 }
 
@@ -211,6 +212,90 @@ main article:first-child section a:hover {
 
 /* main article 2 */
 main article:nth-child(2) {
+    position: relative;
+}
+
+aside {
+    position: 
+}
+
+#section-div {
+    width: 10px;
+}
+
+main article:nth-child(2) section:first-child{
+    display: flex;
+    padding: 30px 0 15px 0;
+    position: relative;
+    width: 637px;
+    border-bottom: 1px dotted gray;
+}
+
+main article:nth-child(2) section:first-child div{
+    margin: 0 0 0 20px;
+}
+
+main article:nth-child(2) section:first-child div h3{
+    color: rgb(80, 80, 80);
+    font-family: Baskervald;
+    font-size: 25px;
+    padding-bottom: 2px;
+    border-bottom: 1px dotted black;
+}
+
+main article:nth-child(2) section:first-child div p {
+    font-family: "Microsoft Yi Baiti";
+    font-size: 18px;
+    padding: 5px 0 10px 0;
+}
+
+main article:nth-child(2) section:first-child div a{
+    float: right;
+    text-decoration: none;
+    color:rgb(34, 101, 169);
+    font-family: "Microsoft Yi Baiti";
+    font-size: 18px;
+    font-weight: bold;
     
+    transition: all 0.3s ease;
+}
+
+main article:nth-child(2) section:first-child div a:hover {
+    color: rgb(116, 167, 219);
+}
+
+main article:nth-child(2) section:first-child img {
+    width: 200px;
+    height: 160px;
+    border: 5px solid white;
+    outline: 2px solid rgb(34, 101, 169);
+    box-sizing: content-box;
+}
+
+main article:nth-child(2) section:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+}
+
+main article:nth-child(2) section:nth-child(2) img {
+    width: 160px;
+    height: 92px;
+    border: 5px solid white;
+    outline: 2px solid rgb(34, 101, 169);
+    box-sizing: content-box;
+}
+/* /main article 2 */
+/*/styling main*/
+
+/*styling footer*/
+
+footer {
+    background-color: rgb(34, 101, 169);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
 }
 /* for the contact page */

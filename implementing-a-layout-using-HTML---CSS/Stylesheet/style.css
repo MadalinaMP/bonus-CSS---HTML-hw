@@ -143,7 +143,6 @@ figure div:last-child {
 figure div:last-child:hover {
     -webkit-transform: scale(1.05);
     transform: scale(1.03);
-    background-color: rgb(116, 167, 219);
     cursor: pointer;
 }
 
@@ -156,5 +155,62 @@ figure div:last-child a{
 /*/styling header*/
 
 /*styling main*/
+/* main article 1 */
+main article:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed black;
+}
 
+main article:first-child section {
+    background-color: rgb(232, 232, 232);
+    padding: 15px;
+    text-align: center;
+}
+
+main article:first-child section h3 {
+    font-size: 22px;
+    padding-bottom: 7px;
+    border-bottom: 1px dashed rgb(34, 101, 169);;
+    font-family: Baskervald;
+}
+
+main article:first-child section img {
+    width: 240px;
+    height: 90px;
+    border: 5px solid white;
+    outline: 2px solid rgb(34, 101, 169);
+    box-sizing: content-box;
+    margin: 20px 0 13px 0;
+}
+
+main article:first-child section p {
+    text-align: left;
+    font-size: 18px;
+    font-family: "Microsoft Yi Baiti";
+    padding-bottom: 15px;
+}
+
+main article:first-child section a {
+    float: right;
+    text-decoration: none;
+    color:rgb(34, 101, 169);
+    font-family: "Microsoft Yi Baiti";
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+main article:first-child section a:hover {
+    color: rgb(116, 167, 219);
+}
+/* /main article 1 */
+
+/* main article 2 */
+main article:nth-child(2) {
+    
+}
 /* for the contact page */

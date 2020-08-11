@@ -5,4 +5,31 @@
     border: 1px dotted gray;
 }
 
+/*for main page*/
+
+/*styling nav*/
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    min-width: 170px;
+    background-color: rgb(34, 101, 169);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgb(116, 167, 219);
+}
+
 /* for the contact page */

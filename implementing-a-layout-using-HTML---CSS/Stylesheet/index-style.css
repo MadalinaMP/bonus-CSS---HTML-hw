@@ -18,119 +18,76 @@
     font-family: "Microsoft Yi Baiti";
 }
 
-nav ul li a, figure div:nth-child(2) p,
-main article:first-child section p,
-main article:first-child section a,
-main article:nth-child(2) section:first-child div p,
-main article:nth-child(2) section:first-child div a {
-    font-size: 18px;
+.common-fontsize1 {
+font-size: 18px;
 }
 
-aside h3, figure div:nth-child(2) h3,
-main article:first-child section h3,
-main article:nth-child(2) section:first-child div h3 {
+.common-fontsize2 {
     font-size: 22px;
 }
 
-figure div:nth-child(2) h3, aside h3 {
+.common-fontweight1 {
     font-weight: lighter;
 }
 
-aside ul li a,
-main article:first-child section a,
-main article:nth-child(2) section:first-child div a {
+.common-fontweight2 {
     font-weight: bold;
 }
 
-/*elements with common positions*/
+/*elements with common properties*/
 body, figure {
     position: relative;
 }
 
-aside,
-#header-div p:first-of-type,
-figure div:first-child,
-figure div:nth-child(2),
-figure div:last-child {
+.common-position {
     position: absolute;
 }
 
-/* elements with common paddings*/
-aside,
-figure div:nth-child(2),
-figure div:last-child,
-main article:first-child section {
+.common-paddings1 {
     padding: 15px;
 }
 
-aside h3,
-main article:nth-child(2) section:first-child div h3 {
+.common-paddings2 {
     padding: 0 0 3px 0;
 }
 
-figure div:nth-child(2) h3,
-main article:first-child section h3 {
+.common-paddings3 {
     padding: 0 0 7px 0;
 }
 
-/*elements with common widths*/
 body, nav {
     width: 900px;
 }
 
-/*elements with common heights*/
-figure div:last-child,
-main article:first-child section img,
-main article:nth-child(2) section:nth-child(2) img {
-    height: 90px;
-}
-
-/*elements with common colors*/
-aside, main article:first-child section {
+.common-gray {
     background-color: rgb(232, 232, 232);
 }
 
-nav ul li a,
-figure div:nth-child(2),
-figure div:last-child,
-footer {
+.common-navy {
     background-color: rgb(34, 101, 169);
 }
 
-aside ul li a,
-main article:first-child section a {
+.common-navy-text {
     color: rgb(34, 101, 169);
 }
 
-nav ul li a,
-figure div:first-child,
-figure div:nth-child(2),
-figure div:last-child a,
-footer {
+.common-white {
     color: white;
 }
 
-aside ul li a:hover,
-main article:first-child section a:hover,
-main article:nth-child(2) section:first-child div a:hover {
+.this-on:hover {
     color: rgb(116, 167, 219);
 }
 
-nav ul li a:hover,
-figure div:last-child:hover {
+.also-this-on:hover {
     background-color: rgb(116, 167, 219);
 }
 
-/*elements that use flexbox*/
-nav ul, nav ul li a, #header-div, figure,
-main article:first-child,
-main article:nth-child(2) section:first-child,
-main article:nth-child(2) section:nth-child(2), footer {
+.uses-flex {
     display: flex;
 }
 
-nav ul, #header-div, main article:first-child,
-main article:nth-child(2) section:nth-child(2), footer {
+.spacing {
     justify-content: space-between;
 }
 
@@ -142,16 +99,11 @@ nav ul li a, #header-div, footer {
     align-items: center;
 }
 
-/*formatting*/
-figure div:first-child,
-main article:first-child section {
+.aligning {
     text-align: center;
 }
 
-aside ul li a, nav ul li a, #header-div a,
-figure div:last-child a,
-main article:first-child section a,
-main article:nth-child(2) section:first-child div a {
+.no-underline {
     text-decoration: none;
 }
 
@@ -159,24 +111,17 @@ nav ul, aside ul {
     list-style: none;
 }
 
-/*borders*/
-main article:nth-child(2) section:first-child,
-main article:nth-child(2) section:first-child div h3 {
+.dotted-border {
     border-bottom: 2px dotted gray;
 }
 
-main article:first-child section img,
-main article:nth-child(2) section:first-child img,
-main article:nth-child(2) section:nth-child(2) img {
+.pic-borders {
     box-sizing: content-box;
     border: 5px solid white;
     outline: 2px solid rgb(34, 101, 169);
 }
 
-/*transitions*/
-aside ul li a, nav ul li a, figure div:last-child,
-main article:first-child section a,
-main article:nth-child(2) section:first-child div a {
+.transitions {
     transition: 0.3s ease;
 }
 
@@ -195,7 +140,6 @@ nav ul li a {
     min-width: 170px;
     min-height: 50px;
 }
-/* /styling nav */
 
 /*styling header*/
 #header-div {
@@ -261,7 +205,6 @@ figure div:last-child:hover {
 figure div:last-child a {
     font-size: 60px;
 }
-/*/styling header*/
 
 /*styling main*/
 /* main article 1 */
@@ -276,6 +219,7 @@ main article:first-child section h3 {
 }
 
 main article:first-child section img {
+    height: 90px;
     width: 240px;
     margin: 20px 0 13px 0;
 }
@@ -288,7 +232,6 @@ main article:first-child section p {
 main article:first-child section a {
     float: right;
 }
-/* /main article 1 */
 
 /* main article 2 */
 #section-div {
@@ -310,7 +253,6 @@ main article:nth-child(2) section:first-child div p {
 
 main article:nth-child(2) section:first-child div a {
     float: right;
-    color:rgb(34, 101, 169);
 }
 
 main article:nth-child(2) section:first-child img {
@@ -325,12 +267,10 @@ main article:nth-child(2) section:nth-child(2) {
 main article:nth-child(2) section:nth-child(2) img {
     width: 160px;
 }
-/* /main article 2 */
-/*/styling main*/
 
 /*styling aside*/
 aside {
-    top: 958px;
+    top: 955px;
     right: 0;
     width: 250px;
 }
@@ -348,7 +288,6 @@ aside ul li {
     padding: 3px 0 3px 0;
     border-bottom: 1px solid black;
 }
-/*/styling aside*/
 
 footer {
     height: 50px;

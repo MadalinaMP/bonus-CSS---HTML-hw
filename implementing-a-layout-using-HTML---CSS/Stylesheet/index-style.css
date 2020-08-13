@@ -4,187 +4,261 @@
     padding: 0;
 }
 
+/*for fonts*/
 @font-face {
     font-family: Baskervald;
     src: url('Fonts/baskervaldadfstd.otf');
 }
 
-/*for main page*/
+.baskervald-font {
+    font-family: Baskervald;
+}
 
-body {
-    margin: 0 auto;
-    width: 900px;
+.baiti-font {
+    font-family: "Microsoft Yi Baiti";
+}
+
+nav ul li a, figure div:nth-child(2) p,
+main article:first-child section p,
+main article:first-child section a,
+main article:nth-child(2) section:first-child div p,
+main article:nth-child(2) section:first-child div a {
+    font-size: 18px;
+}
+
+aside h3, figure div:nth-child(2) h3,
+main article:first-child section h3,
+main article:nth-child(2) section:first-child div h3 {
+    font-size: 22px;
+}
+
+figure div:nth-child(2) h3, aside h3 {
+    font-weight: lighter;
+}
+
+aside ul li a,
+main article:first-child section a,
+main article:nth-child(2) section:first-child div a {
+    font-weight: bold;
+}
+
+/*elements with common positions*/
+body, figure {
     position: relative;
 }
 
-aside {
+aside,
+#header-div p:first-of-type,
+figure div:first-child,
+figure div:nth-child(2),
+figure div:last-child {
     position: absolute;
-    top: 958px;
-    right: 0px;
-    background-color: rgb(232, 232, 232);
+}
+
+/* elements with common paddings*/
+aside,
+figure div:nth-child(2),
+figure div:last-child,
+main article:first-child section {
     padding: 15px;
-    width: 250px;
-    margin: 0;
 }
 
-aside h3 {
-    color: rgb(165, 165, 165);
-    font-family: Baskervald;
-    font-size: 20px;
-    padding-bottom: 3px;
-    border-bottom: 1px dashed black;
+aside h3,
+main article:nth-child(2) section:first-child div h3 {
+    padding: 0 0 3px 0;
 }
 
-aside ul {
-    list-style: none;
-    padding-top: 15px;
+figure div:nth-child(2) h3,
+main article:first-child section h3 {
+    padding: 0 0 7px 0;
 }
 
-aside ul li {
-    border-bottom: 1px solid black;
-    padding: 3px 0 3px 0;
+/*elements with common widths*/
+body, nav {
+    width: 900px;
 }
 
-aside ul li a {
-    text-decoration: none;
-    font-family: "Microsoft Yi Baiti";
+/*elements with common heights*/
+figure div:last-child,
+main article:first-child section img,
+main article:nth-child(2) section:nth-child(2) img {
+    height: 90px;
+}
+
+/*elements with common colors*/
+aside, main article:first-child section {
+    background-color: rgb(232, 232, 232);
+}
+
+nav ul li a,
+figure div:nth-child(2),
+figure div:last-child,
+footer {
+    background-color: rgb(34, 101, 169);
+}
+
+aside ul li a,
+main article:first-child section a {
     color: rgb(34, 101, 169);
+}
+
+nav ul li a,
+figure div:first-child,
+figure div:nth-child(2),
+figure div:last-child a,
+footer {
+    color: white;
+}
+
+aside ul li a:hover,
+main article:first-child section a:hover,
+main article:nth-child(2) section:first-child div a:hover {
+    color: rgb(116, 167, 219);
+}
+
+nav ul li a:hover,
+figure div:last-child:hover {
+    background-color: rgb(116, 167, 219);
+}
+
+/*elements that use flexbox*/
+nav ul, nav ul li a, #header-div, figure,
+main article:first-child,
+main article:nth-child(2) section:first-child,
+main article:nth-child(2) section:nth-child(2), footer {
+    display: flex;
+}
+
+nav ul, #header-div, main article:first-child,
+main article:nth-child(2) section:nth-child(2), footer {
+    justify-content: space-between;
+}
+
+nav ul li a, figure {
+    justify-content: center;
+}
+
+nav ul li a, #header-div, footer {
+    align-items: center;
+}
+
+/*formatting*/
+figure div:first-child,
+main article:first-child section {
+    text-align: center;
+}
+
+aside ul li a, nav ul li a, #header-div a,
+figure div:last-child a,
+main article:first-child section a,
+main article:nth-child(2) section:first-child div a {
+    text-decoration: none;
+}
+
+nav ul, aside ul {
+    list-style: none;
+}
+
+/*borders*/
+main article:nth-child(2) section:first-child,
+main article:nth-child(2) section:first-child div h3 {
+    border-bottom: 2px dotted gray;
+}
+
+main article:first-child section img,
+main article:nth-child(2) section:first-child img,
+main article:nth-child(2) section:nth-child(2) img {
+    box-sizing: content-box;
+    border: 5px solid white;
+    outline: 2px solid rgb(34, 101, 169);
+}
+
+/*transitions*/
+aside ul li a, nav ul li a, figure div:last-child,
+main article:first-child section a,
+main article:nth-child(2) section:first-child div a {
+    transition: 0.3s ease;
+}
+
+body {
+    margin:auto;
 }
 
 /*styling nav*/
 nav {
-  position: fixed;
-  width: 900px;
-  background-color: white;
-  z-index: 2;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
 }
 
 nav ul li a {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 50px;
     min-width: 170px;
-    background-color: rgb(34, 101, 169);
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    
-    transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: rgb(116, 167, 219);
+    min-height: 50px;
 }
 /* /styling nav */
 
 /*styling header*/
 #header-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 80px 0 20px 0;
-    font-family: Baskervald;
-    position: relative;
 }
 
 #header-div a {
-    text-decoration: none;
-    color:black;
     font-size: 36px;
-    
+    color:black;
 }
 
 #header-div p:first-of-type {
-    position: absolute;
     left: 240px;
-    height: 50px;
     line-height: 50px;
+    padding: 0 0 0 10px;
     border-left: 1.2px solid black;
-    padding-left: 10px;
 }
 
 #header-div p:nth-of-type(2) {
-    font-family: "Microsoft Yi Baiti";
     line-height: 13px;
 }
 
 figure {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(190, 218, 255);
-    position: relative;
     width: 100%;
     height: 335px;
+    background-color: rgb(190, 218, 255);
 }
 
 figure div:first-child {
-    position: absolute;
     bottom: 93px;
-    z-index: 0;
-    background-color: rgb(49, 137, 77);
     width: 841px;
-    color: white;
-    font-family: "Arial Nova";
-    font-size: 120px;
-    text-align: center;
     border-radius: 25px;
     transform: rotate(-18deg) skew(14deg, 4deg);
+    font-size: 120px;
+    font-family: "Arial Nova";
+    background-color: rgb(49, 137, 77);
 }
 
 figure div:nth-child(2) {
-    position: absolute;
     left: 28px;
     bottom: 135px;
-    z-index: 1;
-    background-color: rgb(34, 101, 169);
-    color: white;
-    padding: 15px;
 }
 
 figure div:nth-child(2) h3 {
-    font-family: Baskervald;
-    font-weight: lighter;
-    font-size: 22px;
-    padding-bottom: 7px;
     border-bottom: 1px dashed white;
 }
 
 figure div:nth-child(2) p {
-    font-family: "Microsoft Yi Baiti";
-    font-size: 17.5px;
-    padding-top: 5px;
+    padding: 5px 0 0 0;
 }
 
 figure div:last-child {
-    background-color: rgb(34, 101, 169);
-    height: 93px;
-    padding: 10px;
-    position: absolute;
-    top: 280px;
+    top: 268px;
     right: 30px;
-    z-index: 1;
-    
-    transition: 0.3s ease;
+    height: 100px;
 }
 
 figure div:last-child:hover {
-    -webkit-transform: scale(1.05);
     transform: scale(1.03);
-    background-color: rgb(116, 167, 219);
     cursor: pointer;
 }
 
-figure div:last-child a{
-    text-decoration: none;
-    color: white;
-    font-family: Baskervald;
+figure div:last-child a {
     font-size: 60px;
 }
 /*/styling header*/
@@ -192,142 +266,91 @@ figure div:last-child a{
 /*styling main*/
 /* main article 1 */
 main article:first-child {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 70px;
-    padding-bottom: 30px;
+    margin: 70px 0 0 0;
+    padding: 0 0 30px 0;
     border-bottom: 1px dashed black;
 }
 
-main article:first-child section {
-    background-color: rgb(232, 232, 232);
-    padding: 15px;
-    text-align: center;
-}
-
 main article:first-child section h3 {
-    font-size: 22px;
-    padding-bottom: 7px;
     border-bottom: 1px dashed rgb(34, 101, 169);;
-    font-family: Baskervald;
 }
 
 main article:first-child section img {
     width: 240px;
-    height: 90px;
-    border: 5px solid white;
-    outline: 2px solid rgb(34, 101, 169);
-    box-sizing: content-box;
     margin: 20px 0 13px 0;
 }
 
 main article:first-child section p {
     text-align: left;
-    font-size: 18px;
-    font-family: "Microsoft Yi Baiti";
-    padding-bottom: 15px;
+    padding: 0 0 15px 0;
 }
 
 main article:first-child section a {
     float: right;
-    text-decoration: none;
-    color:rgb(34, 101, 169);
-    font-family: "Microsoft Yi Baiti";
-    font-size: 18px;
-    font-weight: bold;
-
-    transition: all 0.3s ease;
-}
-
-main article:first-child section a:hover {
-    color: rgb(116, 167, 219);
 }
 /* /main article 1 */
 
 /* main article 2 */
-main article:nth-child(2) {
-    position: relative;
-}
-
 #section-div {
     width: 10px;
 }
 
-main article:nth-child(2) section:first-child{
-    display: flex;
-    padding: 30px 0 15px 0;
-    position: relative;
+main article:nth-child(2) section:first-child {
     width: 637px;
-    border-bottom: 1px dotted gray;
+    padding: 30px 0 15px 0;
 }
 
-main article:nth-child(2) section:first-child div{
+main article:nth-child(2) section:first-child div {
     margin: 0 0 0 20px;
 }
 
-main article:nth-child(2) section:first-child div h3{
-    color: rgb(80, 80, 80);
-    font-family: Baskervald;
-    font-size: 25px;
-    padding-bottom: 2px;
-    border-bottom: 1px dotted black;
-}
-
 main article:nth-child(2) section:first-child div p {
-    font-family: "Microsoft Yi Baiti";
-    font-size: 18px;
     padding: 5px 0 10px 0;
 }
 
-main article:nth-child(2) section:first-child div a{
+main article:nth-child(2) section:first-child div a {
     float: right;
-    text-decoration: none;
     color:rgb(34, 101, 169);
-    font-family: "Microsoft Yi Baiti";
-    font-size: 18px;
-    font-weight: bold;
-    
-    transition: all 0.3s ease;
-}
-
-main article:nth-child(2) section:first-child div a:hover {
-    color: rgb(116, 167, 219);
 }
 
 main article:nth-child(2) section:first-child img {
     width: 200px;
     height: 160px;
-    border: 5px solid white;
-    outline: 2px solid rgb(34, 101, 169);
-    box-sizing: content-box;
 }
 
-main article:nth-child(2) section:nth-child(2){
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0 20px 0;
+main article:nth-child(2) section:nth-child(2) {
+    margin: 30px 0 20px 0;
 }
 
 main article:nth-child(2) section:nth-child(2) img {
     width: 160px;
-    height: 92px;
-    border: 5px solid white;
-    outline: 2px solid rgb(34, 101, 169);
-    box-sizing: content-box;
 }
 /* /main article 2 */
 /*/styling main*/
 
-/*styling footer*/
+/*styling aside*/
+aside {
+    top: 958px;
+    right: 0;
+    width: 250px;
+}
+
+aside h3 {
+    color: rgb(165, 165, 165);
+    border-bottom: 1px dashed rgb(165, 165, 165);
+}
+
+aside ul {
+    padding: 15px 0 0 0;
+}
+
+aside ul li {
+    padding: 3px 0 3px 0;
+    border-bottom: 1px solid black;
+}
+/*/styling aside*/
+
 footer {
-    background-color: rgb(34, 101, 169);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 50px;
-    clear: right;
     padding: 0 10px 0 10px;
 }
-/*/styling footer*/
-/* for the contact page */

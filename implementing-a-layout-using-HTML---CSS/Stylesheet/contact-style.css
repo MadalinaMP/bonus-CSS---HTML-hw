@@ -5,111 +5,126 @@
     font-family: "Arial";
 }
 
-header {
-    display: flex;
-    align-items: center;
-    padding: 55px 245px 40px 235px;
-    background-color: rgb(238, 238, 238);
-    height: 170px;
-}
-
-h1 {
-    font-size: 58px;
-    font-weight: lighter;
-    color: rgb(48, 48, 48);
-    overflow: hidden;
-}
-
-h2 {
-    font-weight: lighter;
-    font-size: 38px;
-    color: rgb(147, 148, 149);
-    height: 40px;
-    margin: 0 0 0 20px;
-    overflow: hidden;
-}
-
-form {
-    width: 650px;
-    height: 260px;
-    margin: 30px auto 30px auto;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(245, 245, 245);
+/*elements that use the same properties*/
+.common-paddings {
     padding: 10px;
-    line-height: 30px;
+}
+
+.common-widths {
+    width: 420px;
+}
+
+.common-fontsize {
+    font-size: 14px;
+}
+
+.centering {
+    margin: auto;
+}
+
+.uses-flex {
+    display: flex;
+}
+
+.lighter-font {
+    font-weight: lighter;
+}
+
+.lighter-black {
+    color: rgb(48, 48, 48);
+}
+
+.hide-overflow {
+    overflow: hidden;
+}
+
+.equal-distance {
+    justify-content: space-between;
+}
+
+.inner-shadow {
     border-radius: 5px;
     box-shadow: inset 0px 0px 3px -1px rgba(120,120,120,1);
 }
 
-label {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
+.borders {
+    border: 1px solid rgb(196, 196, 196);
+}
+
+/*styling the header*/
+header {
+    align-items: center;
+    height: 170px;
+    padding: 55px 245px 40px 235px;
+    background-color: rgb(238, 238, 238);
+}
+
+h1 {
+    font-size: 58px;
+}
+
+h2 {
+    height: 40px;
+    margin-left: 20px;
+    font-size: 38px;
+    color: rgb(147, 148, 149);
+}
+
+/*styling the form*/
+form {
+    width: 650px;
+    height: 260px;
+    margin: 30px auto 30px auto;
+    line-height: 30px;
+    background-color: rgb(245, 245, 245);
 }
 
 form div:nth-child(2){
-    display: flex;
     flex-direction: column;
     width: 50%;
     position: relative;
 }
 
-textarea {
-    height: 150px;
-    border: 1px solid rgb(196, 196, 196);
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 15px;
-    box-shadow: inset 0px 0px 3px -1px rgba(120,120,120,1);
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-input[type="textbox"]{
-    border: 1px solid rgb(196, 196, 196);
+input[type="textbox"] {
     width: 300px;
     height: 30px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: inset 0px 0px 3px -1px rgba(120,120,120,1);
+}
+
+textarea {
+    margin-bottom: 15px;
+    height: 150px;
 }
 
 input[type="button"] {
-    width: 120px;
-    padding: 10px;
-    color: white;
-    background-color: rgb(66, 139, 202);
-    border-radius: 5px;
-    box-shadow: inset 0px 0px 3px -1px rgba(120,120,120,1);
     position: absolute;
-    bottom: 0;
+    width: 120px;
     right: 0;
-    cursor: pointer;
+    bottom: 0;
+    background-color: rgb(66, 139, 202);
     border: 1px solid rgb(49, 106, 156);
+    color: white;
+    cursor: pointer;
 }
 
+/*styling the footer*/
 h3 {
-    display: flex;
     justify-content: center;
-    margin: auto;
-    font-weight: lighter;
-    color: rgb(48, 48, 48);
     font-size: 20px;
     line-height: 35px;
     border-bottom: 1px solid rgb(209, 209, 209);
-    width: 420px;
 }
 
 footer a {
     text-decoration: none;
     color: rgb(66, 139, 202);
-    font-size: 14px;
 }
 
 footer ul {
-    display: flex;
     list-style: none;
-    justify-content: space-between;
-    width: 420px;
-    margin: auto;
     line-height: 50px;
 }
